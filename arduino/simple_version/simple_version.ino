@@ -7,15 +7,14 @@
 #define HUM_SUELO "59de4024c03f973fd864f643"
 #define LUZ "59de34e7c03f9732af48fb5d"
 
-#define WIFISSID "Pulpito"
-#define PASSWORD "t3l3c0av"
+#include "config_wifi.h" // -> WIFISSID, PASSWORD
 
 Ubidots client(TOKEN);
 
 /* Sensores */
 #include "DHT.h"
-#define DHTPIN 14     // what digital pin we're connected to
-#define DHTTYPE DHT11   // DHT 22  (AM2302), AM2321
+#define DHTPIN 14
+#define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
 #include "Wire.h"
